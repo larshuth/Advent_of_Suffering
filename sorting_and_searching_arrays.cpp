@@ -1,19 +1,15 @@
 //
 // Created by lars on 23.12.20.
 //
+#include <cmath>
 
 using namespace std;
 
-#ifndef ADVENT_OF_SUFFERING_SORTING_AND_SEARCHING_ARRAYS_H
-#define ADVENT_OF_SUFFERING_SORTING_AND_SEARCHING_ARRAYS_H
-
-#endif //ADVENT_OF_SUFFERING_SORTING_AND_SEARCHING_ARRAYS_H
 
 //Originally by Isabel Vargas @ Stack Overflow
 //Slightly modified
 
-void merge(int *arr, int size, int first, int middle, int last)
-{
+void merge(int *arr, int size, int first, int middle, int last) {
     //merging is not happening in place but instead using a temporary extra array
     int temp[size];
     //copying values into temporary array
@@ -45,8 +41,7 @@ void merge(int *arr, int size, int first, int middle, int last)
 }
 
 
-void mergesort(int *arr, int size, int first, int last)
-{
+void mergesort(int *arr, int size, int first, int last) {
     if(first<last) {
         int middle = round((first + last )/2 );
 
@@ -59,7 +54,7 @@ void mergesort(int *arr, int size, int first, int last)
 
 
 
-bool binary_search_for_target_value_rec(int *input, int first, int last, int target){
+bool binary_search_for_target_value_rec(int *input, int first, int last, int target) {
     int middle = round((first+last)/2);
     //check
     if (first == last) {
